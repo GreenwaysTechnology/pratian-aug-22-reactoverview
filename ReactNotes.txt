@@ -1,0 +1,73 @@
+React;
+ js lib for building user interfaces
+ js dom wrapper/framework/lib
+
+JSX:
+ it is language used to create user interfaces.
+ react code is written using this language
+
+browser cant understand jsx directly,so we need to compile the code from jsx to js.
+
+JSX  code
+ html code + js code
+
+component:
+  large user interface is broken into smallar and smaller and resuable ui element called component.
+
+component is object which represents ui .
+
+we are creating components and assemble them in tree like structure.
+
+component creational patterns
+
+1.variables
+2.functions - most recommended pattern
+3.classes
+
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+//define component using variable
+const HelloWorld = <h1>Hello React!</h1>
+
+//rendering the HelloWorld into browser 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(HelloWorld)
+
+//functions
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+//define component using functions
+// function HelloWorld(){
+//     return <h1>Hello React</h1>
+// }
+// const HelloWorld = () => {
+//     return <h1>Hello React</h1>
+// }
+const HelloWorld = () => <h1>Hello React</h1>
+
+//rendering the HelloWorld into browser 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<HelloWorld />)
+
+
+
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+
+class HelloWorld extends React.Component {
+
+    render() {
+        return <h1>Hello React!!</h1>
+    }
+}
+
+//rendering the HelloWorld into browser 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(<HelloWorld />)
+

@@ -1,0 +1,1 @@
+(()=>{"use strict";class l{findAll(){return"findAll"}}!function(){let n=new l;console.log(n.findAll())}()})();
